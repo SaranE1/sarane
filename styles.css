@@ -688,16 +688,32 @@ button, a {
 
   .nav {
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem 0;
+    justify-content: space-between;
+    gap: 0.6rem 1rem;
+    padding: 0.65rem 0;
   }
 
   .nav-links {
-    justify-content: center;
+    order: 2;
+    flex: 0 0 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 0.55rem 0.8rem;
   }
 
   .hero {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 
   .stats {
