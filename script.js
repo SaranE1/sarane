@@ -62,8 +62,14 @@ function initTerminal() {
 
 initTerminal();
 
+function focusTerminalOnDesktop() {
+  if (window.matchMedia('(min-width: 721px)').matches) {
+    terminalInput.focus();
+  }
+}
+
 if (document.readyState === 'complete') {
-  terminalInput.focus();
+  focusTerminalOnDesktop();
 } else {
-  window.addEventListener('load', () => terminalInput.focus());
+  window.addEventListener('load', focusTerminalOnDesktop);
 }

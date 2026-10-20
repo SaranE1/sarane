@@ -683,7 +683,7 @@ button, a {
 
 @media (max-width: 720px) {
   .site-header {
-    position: static;
+    /* position: static; */
   }
 
   .nav {
